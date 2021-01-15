@@ -1,3 +1,6 @@
+@import "./../../theme.less";
+@theme: @primary-color;
+
 .sp {
     .wrapper {
         position: relative;
@@ -19,7 +22,7 @@
         }
 
         & .left {
-            background: radial-gradient(circle at right top, transparent 5px, #44C9A1 0) right top, radial-gradient(circle at right bottom, transparent 5px, #44C9A1 0) right bottom;
+            background: radial-gradient(circle at right top, transparent 5px, @primary-color 0) right top, radial-gradient(circle at right bottom, transparent 5px, @primary-color 0) right bottom;
             background-size: 100% 60%;
             background-repeat: no-repeat;
             color: white;
@@ -29,7 +32,7 @@
         }
 
         .right {
-            background: radial-gradient(circle at top left, transparent 5px, #44C9A1 0) top left, radial-gradient(circle at bottom left, transparent 5px, #44C9A1 0) bottom left;
+            background: radial-gradient(circle at top left, transparent 5px, @primary-color 0) top left, radial-gradient(circle at bottom left, transparent 5px, @primary-color 0) bottom left;
             background-size: 100% 60%;
             background-repeat: no-repeat;
             width: 80%;
@@ -63,7 +66,7 @@
         }
 
         & .top {
-            background: radial-gradient(circle at left bottom, transparent 5px, #44C9A1 0) left bottom, radial-gradient(circle at right bottom, transparent 5px, #44C9A1 0) right bottom;
+            background: radial-gradient(circle at left bottom, transparent 5px, @primary-color 0) left bottom, radial-gradient(circle at right bottom, transparent 5px, @primary-color 0) right bottom;
             background-size: 60% 100%;
             background-repeat: no-repeat;
             color: white;
@@ -73,7 +76,7 @@
         }
 
         & .bottom {
-            background: radial-gradient(circle at top left, transparent 5px, #44C9A1 0%) top left, radial-gradient(circle at right top, transparent 5px, #44C9A1 0) right top;
+            background: radial-gradient(circle at top left, transparent 5px, @primary-color 0%) top left, radial-gradient(circle at right top, transparent 5px, @primary-color 0) right top;
             background-size: 60% 100%;
             background-repeat: no-repeat;
             width: 100%;

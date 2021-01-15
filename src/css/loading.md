@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 示例
+  title: css示例
   path: /css
 ---
 
