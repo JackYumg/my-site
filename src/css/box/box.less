@@ -1,0 +1,114 @@
+@import "./../../theme.less";
+@theme: @primary-color;
+@pads: 5px;
+@boxS: 60px;
+@shape: 45deg;
+
+.box-loading {
+    margin-left: 50%;
+    margin-top: 0;
+    transform: translate(-25%, 0);
+    height: 300px;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: @boxS * 3 + 6 * @pads;
+
+        li {
+            height: @boxS / 2;
+            width: @boxS;
+            display: inline-block;
+            background: @theme;
+            position: relative;
+            transform: skew(-@shape, 0deg);
+            margin: @pads;
+            box-shadow: 130px 140px 10px 0px #0000002e;
+            transition: all 1s;
+
+            &::after {
+                content: "";
+                height: @boxS / 2;
+                width: @boxS;
+                display: inline-block;
+                position: absolute;
+                background: darken(@theme , 10%);
+                transform: skew(0deg, @shape);
+                top: @boxS / 2;
+                left: 100%;
+            }
+
+            &::before {
+                content: "";
+                height: @boxS;
+                width: @boxS;
+                display: inline-block;
+                position: absolute;
+                background: lighten(@theme , 10%);
+                transform: skew(@shape, 0deg);
+                top: @boxS / 2;
+                left: @boxS / 2;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-left: -(@pads * 8);
+        }
+
+        &:nth-child(3) {
+            margin-left: -(@pads * 16);
+        }
+    }
+
+    .f_1 {
+        li {
+            .runs(1.2s, 0.1s);
+        }
+    }
+
+    .f_2 {
+        li {
+            .runs(1.2s, 0.2s);
+        }
+    }
+
+    .f_3 {
+        li {
+            .runs(1.2s, 0.3s);
+        }
+    }
+}
+
+
+.runs(@time , @dey) {
+    &:last-child {
+        animation: box-load-run @time infinite ease-in-out;
+        animation-delay: @dey * 3;
+    }
+
+    &:first-child {
+        animation: box-load-run @time infinite ease-in-out;
+        animation-delay: @dey * 1;
+    }
+
+    &:nth-child(2) {
+        animation: box-load-run @time infinite ease-in-out;
+        animation-delay: @dey * 2;
+    }
+}
+
+
+@keyframes box-load-run {
+    0% {
+        transform: translate(0px, 0px) skew(-45deg, 0deg);
+    }
+
+    50% {
+        transform: translate(0px, 12px) skew(-45deg, 0deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) skew(-45deg, 0deg);
+    }
+}

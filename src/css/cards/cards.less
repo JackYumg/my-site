@@ -1,0 +1,85 @@
+.sp {
+    .wrapper {
+        position: relative;
+        width: 320px;
+        height: 100px;
+        margin: auto;
+        filter: drop-shadow(2px 2px 3px #999);
+
+        & div {
+            height: 100%;
+        }
+
+        & .dash-line {
+            position: absolute;
+            left: 20%;
+            top: 5px;
+            height: calc(100% - 10px);
+            border-left: 1px dotted #fff;
+        }
+
+        & .left {
+            background: radial-gradient(circle at right top, transparent 5px, #44C9A1 0) right top, radial-gradient(circle at right bottom, transparent 5px, #44C9A1 0) right bottom;
+            background-size: 100% 60%;
+            background-repeat: no-repeat;
+            color: white;
+            width: 20%;
+            border-radius: 5px 0px 0 5px;
+            float: left;
+        }
+
+        .right {
+            background: radial-gradient(circle at top left, transparent 5px, #44C9A1 0) top left, radial-gradient(circle at bottom left, transparent 5px, #44C9A1 0) bottom left;
+            background-size: 100% 60%;
+            background-repeat: no-repeat;
+            width: 80%;
+            color: white;
+            border-radius: 5px;
+            float: right;
+        }
+    }
+}
+
+.cz {
+    margin-top: 20px;
+
+    .wrapper {
+        position: relative;
+        width: 100px;
+        height: 320px;
+        margin: auto;
+        filter: drop-shadow(5px 3px 3px #999);
+
+        & div {
+            width: 100%;
+        }
+
+        & .dash-line {
+            position: absolute;
+            top: 20%;
+            left: 5px;
+            width: calc(100% - 10px);
+            border-bottom: 1px dotted #fff;
+        }
+
+        & .top {
+            background: radial-gradient(circle at left bottom, transparent 5px, #44C9A1 0) left bottom, radial-gradient(circle at right bottom, transparent 5px, #44C9A1 0) right bottom;
+            background-size: 60% 100%;
+            background-repeat: no-repeat;
+            color: white;
+            width: 100%;
+            height: 20%;
+            border-radius: 5px 5px 0 0px;
+        }
+
+        & .bottom {
+            background: radial-gradient(circle at top left, transparent 5px, #44C9A1 0%) top left, radial-gradient(circle at right top, transparent 5px, #44C9A1 0) right top;
+            background-size: 60% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80%;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}

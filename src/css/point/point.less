@@ -1,0 +1,52 @@
+@import "./../../theme.less";
+@theme: @primary-color;
+
+.loop(@size)when(@size > 0) {
+  .loop(@size - 1);
+
+  &:nth-of-type(@{size}) {
+    animation: run 3s (0.6s - 0.1s * @size) infinite ease-in-out;
+  }
+}
+
+.container {
+  margin-left: 50%;
+  margin-top: 0;
+  transform: translate(-25%, -30%);
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      background: @theme;
+      border-radius: 50%;
+      .loop(6);
+    }
+  }
+}
+
+@keyframes run {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}

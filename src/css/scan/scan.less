@@ -1,0 +1,57 @@
+@import "./../../theme.less";
+@theme: @primary-color;
+
+.scan-load {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+
+    .loading {
+        height: 50px;
+        display: inline-block;
+        margin-left: 50%;
+        margin-top: 0;
+        transform: translate(-50%, 0);
+
+        .line {
+            width: 1rem;
+            height: 3rem;
+            background: @theme;
+            display: inline-block;
+
+            &+.line {
+                margin-left: 4px;
+            }
+
+            .loop(6);
+        }
+    }
+}
+
+:host {
+    height: 100%;
+    width: 100%;
+}
+
+.loop(@size) when(@size > 0) {
+    &:nth-of-type(@{size}) {
+        animation: scanLoad 2s (0.6s - 0.2s * @size) infinite ease-in-out;
+    }
+
+    .loop(@size - 1);
+}
+
+
+@keyframes scanLoad {
+    0% {
+        transform: rotate3d(3, 0, 0, 0);
+    }
+
+    50% {
+        transform: rotate3d(3, 0, 0, 75deg);
+    }
+
+    100% {
+        transform: rotate3d(3, 0, 0, 0);
+    }
+}
