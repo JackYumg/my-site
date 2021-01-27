@@ -8,3 +8,9 @@ group:
 ---
 
 # Angular
+
+## Angular APP 创建
+
+<code>
+    ng new project-name
+</code>
