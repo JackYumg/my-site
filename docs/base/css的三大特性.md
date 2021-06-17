@@ -3,7 +3,7 @@ nav:
     title: '基础'
     path: /base
 group:
-    path: /基础/index
+    path: /base/index
     title: '基础'
 ---
 
