@@ -4,7 +4,7 @@ hero:
   desc: 一个属于记忆的停留的个人网站，web 学习记录网站
   actions:
     - text: 开始了解
-      link: /components
+      link: /base
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 前端
@@ -17,4 +17,3 @@ features:
     desc: 代码示例展示
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
-
